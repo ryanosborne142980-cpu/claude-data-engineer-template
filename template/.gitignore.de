@@ -1,0 +1,38 @@
+# --- data engineering template ---
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.key
+
+# Raw and extracted data (use tests/fixtures/ for small sanitized samples)
+raw_files/
+data/raw/
+data/extracts/
+*.parquet
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Databricks
+.databricks/
+
+# Azure / Bicep build output
+infra/**/*.json.out
+.azure/
+
+# SQL projects
+bin/
+obj/
+artifacts/
+
+# Claude Code personal settings
+.claude/settings.local.json
